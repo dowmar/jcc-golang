@@ -1,0 +1,8 @@
+If you are using Javascrip/Typescript, then it will probably be the easiest solution to use node-google-translate-skidz.
+
+All other Languages should do a REST POST call directly to https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=qca&dt=rm&dt=bd&dj=1&ie=UTF-8&oe=UTF-8&inputm=2&otf=2&iid=1dd3b944-fa62-4b55-b330-74909a99969e with the POST parameters 'sl=de&tl=en&q=Hurra.'
+
+The trickiest part will be how to pass the parameters in your language.
+
+Try in terminal:
+curl 'https://translate.google.com/translate_a/single?client=at&dt=t&dt=ld&dt=qca&dt=rm&dt=bd&dj=1&ie=UTF-8&oe=UTF-8&inputm=2&otf=2&iid=1dd3b944-fa62-4b55-b330-74909a99969e' -X POST -d 'sl=de&tl=en&q=Hurra.'

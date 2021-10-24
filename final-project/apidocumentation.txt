@@ -1,0 +1,97 @@
+------------DATABASE-------------
+
+DB_HOST = tcp(db4free.net:3306)
+DB_DATABASE = db_jcc_go_domar
+DB_USERNAME = iamnohero23
+DB_PASSWORD = iamnohero23
+
+-------------TABLE----------------------------
+
+Admin
+ID : integer (PRIMARY KEY)
+Name : string 
+LoginAt : time.Time "menyatakan waktu login"
+UpdatedAt : time.Time
+
+//API
+GET(BasicAuth)  : https://demo-jcc-test2.herokuapp.com/admin/ 
+POST : https://demo-jcc-test2.herokuapp.com/admin/create
+
+-----------------------------------------------
+Makanan
+Id_Makanan : uint (PRIMARY KEY)
+Nama_Makanan : string
+Stock_Makanan : integer
+Harga_Makanan : integer
+Id_Supplier : uint (FOREIGN KEY)
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/makanan
+POST : https://demo-jcc-test2.herokuapp.com/makanan/create
+
+------------------------------------------------
+
+Minuman
+Id_Minuman : uint (PRIMARY KEY)
+Nama_Minuman : string
+Stock_Makanan : int
+Harga_Makanan : int
+Id_Supplier : uint (FOREIGN KEY)
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/minuman
+POST : https://demo-jcc-test2.herokuapp.com/minuman/create
+
+------------------------------------------------
+
+Customer
+Id_Customer : uint (PRIMARY KEY)
+Nama_Cust : string
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/login
+POST : https://demo-jcc-test2.herokuapp.com/login/create
+
+-------------------------------------------------
+
+Keranjang
+Id_Keranjang : uint (PRIMARY KEY)
+Id_Makanan : uint
+Id_Minuman : uint
+Total_harga : int
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/keranjang
+POST : https://demo-jcc-test2.herokuapp.com/keranjang/create
+PUT  : https://demo-jcc-test2.herokuapp.com/keranjang/keranjang/:id/update
+--------------------------------------------------
+
+Order
+Id_Order : uint (PRIMARY KEY)
+Id_Keranjang : uint (FOREIGN KEY)
+Id_Customer : uint (FOREIGN KEY)
+Id_Shipper : uint (FOREIGN KEY)
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/order
+POST : https://demo-jcc-test2.herokuapp.com/order/create
+
+---------------------------------------------------
+
+Shippers
+Id_Shipper : uint (PRIMARY KEY)
+Nama_Shipper : string
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/shipper
+POST : https://demo-jcc-test2.herokuapp.com/shipper/create
+
+--------------------------------------------------
+
+Supplier
+Id_Supplier : uint (PRIMARY KEY)
+Nama_Supplier : string
+
+//API
+GET  : https://demo-jcc-test2.herokuapp.com/supplier
+POST : https://demo-jcc-test2.herokuapp.com/supplier/create

@@ -1,0 +1,6 @@
+Data Peserta Jabar Coding Camp Golang
+1. Nama: Arysatya Bhagaskara
+2. Email: domararya9029@gmail.com
+3. Sistem Operasi yang digunakan: Windows
+4. Akun Gitlab/Github: @dowmar
+5. Akun Telegram: @dowmar
